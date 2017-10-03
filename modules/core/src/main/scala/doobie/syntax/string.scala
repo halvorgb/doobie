@@ -42,7 +42,7 @@ final class SqlInterpolator(private val sc: StringContext)(implicit pos: Pos) {
     /** There must be a way to abstract over hlist length here,
       * I've never programmed with shapeless before, hopefully my intention gets across.
 
-      * for now: imply create an overloaded function for HLists of fragments of length 2 :)
+      * For now: simply create an overloaded function for HLists of fragments of length 2 :)
       */
     @SuppressWarnings(Array("org.wartremover.warts.Overloading"))
     def applyProduct(fragments: Fragment :: Fragment :: HNil): Fragment = {
